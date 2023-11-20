@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Website</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/821ca6d8de.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="container">
+        <nav>
+            <img src="Images/peak.png" class="Logo">
+            <ul id="sidemenu">
+                <li><a href="#Header"><a href="Index.html">Home</a></li>
+                <li>
+                <a href="#about"><a href="Index.html"></a>About</a>
+                    <ul class="dropdown">
+                        <li><a href="blog.html"> Blog</a></li>
+                        <li><a href="Scenery.html">Scenery</a></li>
+                    </ul>
+                </li>
+                <li><a href="#services"><a href="Index.html">Hobbies</a></li>
+                <li><a href="#travels"><a href="Index.html">Travels</a></li>
+                <li><a href="#contact"><href="Index.html">Contacts</a></li>
+            <i class="fa-solid fa-x" onclick="closemenu()"></i>
+            </ul>
+            <i class="fa-solid fa-bars"onclick="openmenu()"></i>
+        </nav>
+        
+    </div>
+
+<div id = "about" style="font-size: 50px;" align="center"><h3 style="color: #ff004f; padding-bottom: 2%;" > Thailand </h3>
+        <img src="Images/thai 1.jpg" onmouseover="myFunc(this)" onclick="image1()" border="2" style="width: 100px; border-color:white; border-radius: 50%;height: 90px;"> 
+        <img src="Images/thai 2.jpg" onmouseover="myFunc(this)" onclick="image2()" border="2" style="width: 100px; border-color: white; border-radius: 50%;height: 90px;">
+        <img src="Images/thai 3.jpg" onmouseover="myFunc(this)" onclick="image3()" border="2" style="width: 100px; border-color: white; border-radius: 50%;height: 90px;">
+        <img src="Images/thai 4.jpg" onmouseover="myFunc(this)" onclick="image4()" border="2" style="width: 100px; border-color: white; border-radius: 50%;height: 90px;">
+        <img src="Images/thai 5.jpg" onmouseover="myFunc(this)" onclick="image5()" border="2" style="width: 100px; border-color: white; border-radius: 50%;height: 90px;">
+        <img src="Images/thai 6.jpg" onmouseover="myFunc(this)" onclick="image6()" border="2" style="width: 100px; border-color: white; border-radius: 50%;height: 90px;">
+    </div>
+
+    <script>
+    var totalCount = 20;
+
+    function ChangeBack() {
+        var num = Math.ceil( Math.random() * totalCount );
+        document.body.background = 'colors/' +num+ '.jepg';
+        document.body.style.backgroundRepeat = "repeat";
+    }
+    </script>
+    
+    <script>
+    function myFunc(img){
+        var picture=document.getElementById("picture");
+        picture.src=img.src;
+    }
+
+        function image1(){
+            window.alert("Me");
+        }
+
+        function image2(){
+            window.alert("Statue");
+        }
+
+        function image3(){
+            window.alert("Elephant");
+        }
+
+        function image4(){
+            window.alert("with my mom");
+        }
+        function image5(){
+            window.alert("Monk");
+        }
+        function image6(){
+            window.alert("Looking Right");
+        }
+    </script>
+
+    <div style="padding: 20px"> 
+    <center><img id="picture" border ="4" width="800px" height="600px" style="border-radius: 20%; border-color: white;" onclick="ChangeBack()"></center>
+    </div>
